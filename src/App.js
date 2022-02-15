@@ -1,13 +1,15 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import styled from "styled-components";
 import "./App.css";
 import { BlogDetails } from "./components/BlogDetails";
 import CreateBlog from "./components/CreateBlog";
 import { Home } from "./components/Home";
 import { Navbar } from "./components/Navbar";
+import { AppWrapper } from "./styles/styles.jsx";
 
 function App() {
     return (
-        <div>
+        <AppWrapper isLightBlue>
             <BrowserRouter>
                 <Navbar />
                 <Routes>
@@ -16,7 +18,7 @@ function App() {
                     <Route path="/blogs/:id" element={<BlogDetails />} />
                 </Routes>
             </BrowserRouter>
-        </div>
+        </AppWrapper>
     );
 }
 

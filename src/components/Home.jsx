@@ -1,6 +1,7 @@
 import { BlogList } from "./BlogList";
 import useFetch from "./useFetchHook";
 import { useNavigate } from "react-router-dom";
+import { HomeDiv } from "../styles/styles.jsx";
 
 export const Home = () => {
     const navigate = useNavigate();
@@ -21,8 +22,7 @@ export const Home = () => {
         });
     };
     return (
-        <div>
-            <h2>Home Page</h2>
+        <HomeDiv>
             {error && <h3>We have some errors, try again later</h3>}
             {pending && <div>Wczytywanie danych</div>}
             {blogs && (
@@ -32,6 +32,6 @@ export const Home = () => {
                     handleDelete={handleDelete}
                 />
             )}
-        </div>
+        </HomeDiv>
     );
 };
