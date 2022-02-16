@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { CreateBlogContainer } from "./styled/CreateBlog.styled";
+import { Button } from "./styled/Button.styled";
 
 export const CreateBlog = () => {
     const [title, setTitle] = useState("");
@@ -27,7 +29,7 @@ export const CreateBlog = () => {
     };
 
     return (
-        <div>
+        <CreateBlogContainer>
             <h3>New Blog</h3>
             <form
                 onSubmit={handleSubmit}
@@ -69,12 +71,12 @@ export const CreateBlog = () => {
                     <option value="Dominika">Dominika</option>
                 </select>
                 {pending ? (
-                    <button>Add Blog</button>
+                    <Button>Add Blog</Button>
                 ) : (
-                    <button>Adding ...</button>
+                    <Button>Adding ...</Button>
                 )}
             </form>
-        </div>
+        </CreateBlogContainer>
     );
 };
 

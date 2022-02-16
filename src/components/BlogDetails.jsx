@@ -1,5 +1,7 @@
 import useFetch from "./useFetchHook";
 import { useParams, useNavigate } from "react-router-dom";
+import { BlogDetailsStyled } from "./styled/BlogDetailsStyle.styled.jsx";
+import { Button } from "./styled/Button.styled";
 
 export const BlogDetails = () => {
     const params = useParams();
@@ -20,23 +22,24 @@ export const BlogDetails = () => {
         });
     };
     return (
-        <div>
+        <>
             {error && <h3>We have some errors, try again later</h3>}
             {isPending && <div>Wczytywanie danych...</div>}
             {blogs && (
-                <div key={blogs.id}>
+                <BlogDetailsStyled key={blogs.id}>
                     <h3>{blogs.title}</h3>
-                    <p>{blogs.body}</p>
+                    <p>{blogs.content}</p>
                     <p>{blogs.author}</p>
-                    <button
+                    <Button
+                        isDelete
                         onClick={() => {
                             handleDelete(blogs.id);
                         }}
                     >
                         Delete Blog
-                    </button>
-                </div>
+                    </Button>
+                </BlogDetailsStyled>
             )}
-        </div>
+        </>
     );
 };

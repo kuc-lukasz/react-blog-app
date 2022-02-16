@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Button } from "../styles/styles.jsx";
+import { Button } from "./styled/Button.styled.jsx";
 export const BlogList = ({ blogs, title, handleDelete }) => {
     return (
         <>

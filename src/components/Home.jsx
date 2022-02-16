@@ -1,7 +1,7 @@
 import { BlogList } from "./BlogList";
 import useFetch from "./useFetchHook";
 import { useNavigate } from "react-router-dom";
-import { HomeDiv } from "../styles/styles.jsx";
+import { HomeDiv } from "./styled/Home.styled.jsx";
 
 export const Home = () => {
     const navigate = useNavigate();
@@ -28,7 +28,7 @@ export const Home = () => {
             {blogs && (
                 <BlogList
                     blogs={blogs}
-                    title="Blogs List"
+                    title="Posts List"
                     handleDelete={handleDelete}
                 />
             )}
