@@ -6,7 +6,6 @@ export const HomeDiv = styled.div`
     align-items: flex-start;
     flex-direction: column;
     max-width: 600px;
-
     margin: 0 auto;
 
     & > div:hover {

@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { ThemeProvider } from "styled-components";
 import { BlogDetails } from "./components/BlogDetails";
 import CreateBlog from "./components/CreateBlog";
 import { Home } from "./components/Home";
